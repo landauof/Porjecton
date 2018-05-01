@@ -4,17 +4,14 @@ from itertools import chain
 from collections import Counter
 import csv
 # Variables
-path = 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedRawData/User'
+path = 'MFDCA-DATA/FraudedRawData/User'
 
-path_to_classification = 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/challengeToFill.csv'
+path_to_classification = 'MFDCA-DATA/challengeToFill.csv'
 
-path_output = 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedFeatureOutputs/output'
-
+path_output = 'MFDCA-DATA/FraudedFeatureOutputs/output'
 
 
 # Magic
-
-
 def ngramize(commands, num):
     """
     :param commands:
@@ -151,4 +148,4 @@ def export_to_csv_all_users(num):
         print("done user {}".format(user_number))
 
 
-# export_to_csv_all_users(3)
+export_to_csv_all_users(3)

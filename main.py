@@ -4,7 +4,7 @@ import Classifier
 from pathlib import Path
 
 # Consts
-out_0_path = 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedFeatureOutputs/output0.csv'
+out_0_path = 'MFDCA-DATA/FraudedFeatureOutputs/output0.csv'
 FEATURE_SELECTION_MOST_COMMON = 1
 CLASSIFIER_ONE_CLASS_SVM = 1
 

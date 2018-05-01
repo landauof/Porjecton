@@ -4,7 +4,7 @@ from itertools import chain
 from collections import Counter
 
 # Variables
-path = 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedRawData/User'
+path = 'MFDCA-DATA/FraudedRawData/User'
 n = 3
 
 

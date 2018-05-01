@@ -8,9 +8,9 @@ from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 
 # vars
-input_path = 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedFeatureOutputs/output'
+input_path = 'MFDCA-DATA/FraudedFeatureOutputs/output'
 feature_selection_output_path =\
-    'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedFeatureOutputs/superOutput.csv'
+    'MFDCA-DATA/FraudedFeatureOutputs/superOutput.csv'
 
 # Magic
 
