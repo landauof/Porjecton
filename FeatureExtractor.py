@@ -102,14 +102,14 @@ def export_to_csv_single_user(user_number=0):
         n_grams = features_per_block(user_number)
         field_names = get_coloum_headers(user_number)
         field_names = list(set(field_names))
-        field_names.append('class')
+        field_names.append('Class')
         writer = csv.DictWriter(csvFile, fieldnames=field_names)
         writer.writeheader()
         block_number = 0
         for block in n_grams:
             block_number = block_number + 1
             block_dict = dict([(name, block[name]) for name in field_names])
-            block_dict['class'] = get_block_classification(block_number, user_number)
+            block_dict['Class'] = get_block_classification(block_number, user_number)
             writer.writerow(block_dict)
 
 
@@ -148,4 +148,4 @@ def export_to_csv_all_users(num):
         print("done user {}".format(user_number))
 
 
-export_to_csv_all_users(3)
+# export_to_csv_all_users(3)

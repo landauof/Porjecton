@@ -1,16 +1,10 @@
 # imports
 import pandas
-from pandas.plotting import scatter_matrix
-import matplotlib.pyplot as plt
-from sklearn import model_selection
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import accuracy_score
+
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import OneClassSVM
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn import metrics
@@ -18,7 +12,7 @@ import numpy as np
 
 # vars
 selected_features_path =\
-    'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedFeatureOutputs/superOutput.csv'
+    'MFDCA-DATA/FraudedFeatureSelectedOutputs/output0.csv'
 
 # Magic
 
@@ -31,7 +25,6 @@ def classify(features_number=220, method=1, nu=1/10, gamma=0.0001):
 
 
 def one_class_svm(n, g):
-    # 'C:/Users/OFIR/PycharmProjects/FeatureExtraction/MFDCA-DATA/FraudedFeatureOutputs/output5.csv')
     data_set = pandas.read_csv(selected_features_path)
     data_set.pop(data_set.columns[0])
 

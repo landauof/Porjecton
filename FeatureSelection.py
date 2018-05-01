@@ -1,16 +1,12 @@
 # imports
 import pandas
 from collections import Counter
-import csv
-import itertools
-import numpy
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2
+
 
 # vars
 input_path = 'MFDCA-DATA/FraudedFeatureOutputs/output'
 feature_selection_output_path =\
-    'MFDCA-DATA/FraudedFeatureOutputs/superOutput.csv'
+    'MFDCA-DATA/FraudedFeatureSelectedOutputs/output'
 
 # Magic
 
@@ -26,8 +22,8 @@ def select_features(features_number, method=1, user_number=0):
 def load_data_of_user():
     """
     Load data
-    :param number_of_user: user number
-    :return:
+    :param:
+    :return: user data
     """
     df = pandas.read_csv(input_path+str(number_of_user)+'.csv')
     return df
@@ -58,6 +54,10 @@ def most_common_ngrams():
 
     data_frame['Class'] = Y
 
-    data_frame.to_csv(feature_selection_output_path)
+    data_frame.to_csv(feature_selection_output_path + str(number_of_user)+'.csv')
     print("selection")
 
+
+# for ind in range(40):
+#    select_features(220, 1, ind)
+#    print("done user {}".format(ind))
